@@ -1,23 +1,30 @@
 import logo from './logo.svg';
-import './App.css';
+import TwitterLogo from './assets/twitter@3x.png';
+import Services from './components/Services';
 
+import './App.css';
+import Partners from './components/Partners';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <nav>Navbar</nav>
+      <div className='container'>
+        <section className='content' id='steps'>
+          Steps
+        </section>
+        <section className='content' id='apiData'>
+          API Res.
+        </section>
+
+        {/* Services */}
+        <Services />
+
+        {/* Partners */}
+        <section className='content' id='ourPartners'>
+          <p className='setionTitle'>:شركاؤنا في البناء</p>
+        </section>
+      </div>
+      <footer className='footer'>Footer</footer>
     </div>
   );
 }

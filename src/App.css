@@ -1,38 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
+  margin-top: 0;
+}
+
+/* Body */
+
+body {
+  margin: 0;
+  text-align: center;
+  align-items: center;
+  font-family: 'Tajawal', serif;
+  background-image: url(./assets/bg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+/* Navbar */
+
+nav {
+  background-color: red;
+  height: 15vh;
+}
+
+/* ------------------------------------------------ */
+
+/* Container */
+
+.container {
+  text-align: center;
+  margin-top: 1rem;
+  display: grid;
+  height: 100vh;
+  margin-left: 10%;
+  margin-right: 10%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 0.2fr 0.4fr;
+  grid-gap: 1rem;
+  grid-template-areas:
+    'steps steps'
+    'apiData ourServices'
+    'apiData ourPartners';
+}
+.setionTitle {
+  text-align: right;
+  margin-right: 3%;
+}
+
+.content {
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+
+/* Request Journey Section */
+
+#steps {
+  grid-area: steps;
+}
+
+/* Services Section */
+
+#ourServices {
+  grid-area: ourServices;
+}
+
+.servicesContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: row-reverse;
+  align-content: center;
+}
+
+.serviceType {
+  margin: 2%;
+  flex-direction: column;
+  width: 30%;
+  border-radius: 15px;
+  border: 1px solid green;
+}
+
+.serviceDescription {
+  font-size: 1.2em;
+  font-weight: bolder;
+  margin-top: 1%;
+}
+
+#newRequest {
+  margin-right: 20%;
+}
+
+.imageContainer {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.serviceImage {
+  width: 80px;
+  height: 80px;
+  margin-top: 5%;
+  margin-bottom: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* API Data Section */
+
+#apiData {
+  grid-area: apiData;
+  height: 80%;
+}
+
+/* Our Partners Section */
+
+#ourPartners {
+  grid-area: ourPartners;
+  margin-top: 0;
+  height: 40%;
+}
+
+/* Media query */
+@media only screen and (max-width: 700px) {
+  #ourServices {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  #ourServices .setionTitle {
+    display: none;
+  }
+  .serviceType {
+    width: 50%;
+  }
+
+  #newRequest {
+    margin-right: auto;
+  }
+  .servicesContainer {
+    width: 100%;
+  }
+  .container {
+    margin-left: 2%;
+    margin-right: 2%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr, 0.2fr, 0.2fr, 0.2fr;
+    grid-template-areas:
+      'steps'
+      'ourServices'
+      'apiData'
+      'ourPartners';
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* ------------------------------------------------ */
+/* Footer */
+.footer {
+  height: 5vh;
+  background-color: #1f7166;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
