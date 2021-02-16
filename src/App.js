@@ -20,9 +20,7 @@ function App() {
         <Services />
 
         {/* Partners */}
-        <section className='content' id='ourPartners'>
-          <p className='setionTitle'>:شركاؤنا في البناء</p>
-        </section>
+        <Partners/>
       </div>
       <footer className='footer'>Footer</footer>
     </div>
