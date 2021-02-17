@@ -1,9 +1,9 @@
 import logo from './logo.svg';
-import TwitterLogo from './assets/twitter@3x.png';
 import Services from './components/Services';
 
 import './App.css';
 import Partners from './components/Partners';
+import Footer from './components/layout/Footer';
 function App() {
   return (
     <div className='App'>
@@ -20,9 +20,9 @@ function App() {
         <Services />
 
         {/* Partners */}
-        <Partners/>
+        <Partners />
       </div>
-      <footer className='footer'>Footer</footer>
+      <Footer />
     </div>
   );
 }
