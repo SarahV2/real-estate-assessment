@@ -4,10 +4,11 @@ import Services from './components/Services';
 import './App.css';
 import Partners from './components/Partners';
 import Footer from './components/layout/Footer';
+import Navbar from './components/layout/Navbar';
 function App() {
-  return (
+  return ( 
     <div className='App'>
-      <nav>Navbar</nav>
+      <Navbar/>
       <div className='container'>
         <section className='content' id='steps'>
           Steps
