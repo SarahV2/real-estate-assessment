@@ -66,7 +66,7 @@ nav {
 
 /* Request Journey Section */
 
-#steps {
+#processInfo {
   grid-area: steps;
 }
 
@@ -124,7 +124,8 @@ nav {
 #ourPartners {
   grid-area: ourPartners;
   margin-top: 0;
-  height: 70%;
+  /* height: 70%; */
+  padding-bottom: 3%;
   display: flex;
   flex-direction: column;
 }
@@ -147,9 +148,10 @@ nav {
 @media only screen and (max-width: 700px) {
   /* Services Section */
 
-  #ourServices {
+  /* #ourServices {
     background-color: rgba(255, 255, 255, 0);
   }
+
   #ourServices .setionTitle {
     display: none;
   }
@@ -162,12 +164,11 @@ nav {
     margin-right: auto;
   }
   .servicesContainer {
-    width: 100%;
-  }
+    width: 100vw;
+  } */
 
   /* Partners Section */
-  #ourPartners {
-    /* background-color: lawngreen; */
+  /* #ourPartners {
   }
 
   #partnersTitle {
@@ -183,15 +184,16 @@ nav {
     justify-content: space-evenly;
     margin-right: 0;
     margin-left: 0;
-  }
+  } */
 
   /* Main container */
 
-  .container {
+  /* .container {
+   
     margin-left: 2%;
     margin-right: 2%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr, 0.2fr, 0.8fr, 0.2fr;
+    grid-template-columns: 2fr;
+    grid-template-rows: 0.4fr, 0.4fr, 0.4fr, 0.4fr;
     grid-template-areas:
       'steps'
       'ourServices'
@@ -203,7 +205,6 @@ nav {
     height: 60vh;
   }
   .footer {
-    /* position:fixed !important; */
     font-size: 0.5rem;
   }
 
@@ -229,6 +230,11 @@ nav {
   height: 10px;
   margin-left: 2px !important;
   margin-right: 2px !important;
+} */
+
+.app{
+  display: flex;
+  flex-direction: column;
 }
 }
 
@@ -284,4 +290,101 @@ nav {
 
 .footer{
   gap:60%;
+}
+
+
+/* ..................................................................... /
+/* Process Info */
+
+#processInfo {
+  /* width: 90vw; */
+  /* border-radius: 15px; */
+  height: 15vh;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+}
+
+/* Main stage containers */
+
+.detailedStage {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.singleStep {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  /* background-color: violet; */
+  margin-left: 10px;
+  width: 100%;
+  margin-left: 0px;
+}
+
+/* Connectors between stages */
+
+.splitter {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  /* background-color: yellowgreen; */
+}
+
+.line {
+  height: 5px;
+  background-color: #ececec;
+  width: 70px;
+  display: inline;
+  margin-bottom: 80%;
+}
+
+.connector {
+  height: 5px;
+  background-color: #ececec;
+  width: 30px;
+  margin-left: 0;
+  margin-right: 0;
+  padding-right: 0;
+  padding-left: 0;
+  margin-top: 30px;
+}
+
+/* Step Number + image container */
+.visualData {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.stepNumber {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.fancyNum {
+  background-color: #524f52;
+  border-radius: 50%;
+  width: 18px;
+  font-size: small;
+}
+
+.stepImg {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #ececec;
+  text-align: center;
+}
+
+/* Stage description paragraph */
+.stepInfo {
+  text-align: center;
 }

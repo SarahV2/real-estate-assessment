@@ -5,14 +5,16 @@ import './App.css';
 import Partners from './components/Partners';
 import Footer from './components/layout/Footer';
 import Navbar from './components/layout/Navbar';
+import ProcessInfo from './components/ProcessInfo';
 function App() {
   return ( 
-    <div className='App'>
+    <div className='app'>
       <Navbar/>
       <div className='container'>
-        <section className='content' id='steps'>
+        {/* <section className='content' id='steps'>
           Steps
-        </section>
+        </section> */}
+        <ProcessInfo/>
         <section className='content' id='apiData'>
           API Res.
         </section>
@@ -23,7 +25,7 @@ function App() {
         {/* Partners */}
         <Partners />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
