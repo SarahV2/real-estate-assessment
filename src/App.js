@@ -11,10 +11,10 @@ function App() {
     <div className='app'>
       <Navbar/>
       <div className='container'>
-        {/* <section className='content' id='steps'>
+        {/* <section className='content' id='processInfo'>
           Steps
         </section> */}
-        <ProcessInfo/>
+        {/* <ProcessInfo/> */}
         <section className='content' id='apiData'>
           API Res.
         </section>
@@ -25,7 +25,7 @@ function App() {
         {/* Partners */}
         <Partners />
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

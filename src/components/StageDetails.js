@@ -5,7 +5,7 @@ export default function StageDetails(props) {
         <div className='singleStep'>
             {/* Step Nmber and icon */}
             <div className='visualData'>
-                <div className='connector'></div>
+                {/* <div className='connector'></div> */}
                 <div className='stepNumber'>
                     <p className='fancyNum'>{props.data.id}</p>
                 </div>
@@ -13,7 +13,7 @@ export default function StageDetails(props) {
                 <div className='stepImg'>
                     <img src={props.data.imgSrc} />
                 </div>
-                <div className='connector'></div>
+                {/* <div className='connector'></div> */}
 
             </div>
             {/* Step Info */}

@@ -146,13 +146,21 @@ nav {
 
 /* Media query */
 @media only screen and (max-width: 700px) {
+
+  /* html{
+    background-color: red;
+  } */
   /* Services Section */
 
   /* #ourServices {
     background-color: rgba(255, 255, 255, 0);
-  }
+  } */
 
-  #ourServices .setionTitle {
+  /* #ourServices{
+    width:100vw;
+  } */
+
+  /* #ourServices .setionTitle {
     display: none;
   }
   .serviceType {
@@ -165,7 +173,7 @@ nav {
   }
   .servicesContainer {
     width: 100vw;
-  } */
+  }
 
   /* Partners Section */
   /* #ourPartners {
@@ -184,58 +192,92 @@ nav {
     justify-content: space-evenly;
     margin-right: 0;
     margin-left: 0;
-  } */
+  }  */
 
   /* Main container */
-
-  /* .container {
+/* 
+  .container {
    
     margin-left: 2%;
     margin-right: 2%;
-    grid-template-columns: 2fr;
-    grid-template-rows: 0.4fr, 0.4fr, 0.4fr, 0.4fr;
+    grid-template-rows: 0.4fr, 0.2fr, 0.4fr, 0.4fr, 0.4fr;
     grid-template-areas:
-      'steps'
+    'nav'  
+    'steps'
       'ourServices'
       'apiData'
       'ourPartners';
   }
 
+  nav{
+    grid-area: 'nav';
+  }
   #apiData {
     height: 60vh;
   }
-  .footer {
-    font-size: 0.5rem;
-  }
+   */
 
-  #linksContainer{
-    gap:10px !important;
-  }
+.app, .container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container{
+  width:100vw;
+  margin-left:0;
+  margin-right:0;
   
-  .footer{
-    gap:20px !important;
-  }
+}
 
-  #copyright,
- #linksContainer {
-  margin-bottom: 5px;
+#ourServices,#ourPartners,#apiData{
+  /* width:100vw; */
+  margin-left:2%;
+  margin-right:2%;
+}
+
+#apiData{
+  order:2;
+}
+#ourPartners{
+  order:3
+}
+
+
+body{
+  width:100vw;
+  height: 100vh;
+
+}
+
+.footer {
+  font-size: 0.5rem;
+}
+
+#linksContainer{
+  gap:10px !important;
+}
+
+.footer{
+  gap:20px !important;
+}
+
+#copyright,
+#linksContainer {
+margin-bottom: 5px;
 }
 
 #copyright{
-  margin-right:5px;
+margin-right:5px;
 }
 
 .icons{
-  width:10px;
-  height: 10px;
-  margin-left: 2px !important;
-  margin-right: 2px !important;
-} */
-
-.app{
-  display: flex;
-  flex-direction: column;
+width:10px;
+height: 10px;
+margin-left: 2px !important;
+margin-right: 2px !important;
 }
+
 }
 
 /* end of media query */
@@ -300,7 +342,6 @@ nav {
   /* width: 90vw; */
   /* border-radius: 15px; */
   height: 15vh;
-  border: 1px solid black;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
