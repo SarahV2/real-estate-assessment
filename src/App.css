@@ -56,7 +56,6 @@ nav {
   text-align: right;
   margin-right: 3%;
   font-weight: 900;
-
 }
 
 .content {
@@ -89,6 +88,7 @@ nav {
   width: 30%;
   border-radius: 15px;
   border: 1px solid green;
+  background-color: #ececec;
 }
 
 .serviceDescription {
@@ -110,6 +110,11 @@ nav {
   height: 80px;
   margin-top: 5%;
   margin-bottom: 0;
+}
+
+.active{
+  background-color:#1f7166;
+  color: #fff;
 }
 
 /* API Data Section */
@@ -146,39 +151,63 @@ nav {
 
 /* Media query */
 @media only screen and (max-width: 700px) {
+ 
 
-  /* html{
-    background-color: red;
-  } */
+  
+
+
+
+  .app,
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .container {
+    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #ourServices,
+  #ourPartners,
+  #apiData {
+    /* width:100vw; */
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  #apiData {
+    order: 2;
+  }
+  #ourPartners {
+    order: 3;
+  }
+
   /* Services Section */
 
-  /* #ourServices {
+  #ourServices {
     background-color: rgba(255, 255, 255, 0);
-  } */
-
-  /* #ourServices{
-    width:100vw;
-  } */
-
-  /* #ourServices .setionTitle {
+  }
+  #ourServices .setionTitle {
     display: none;
   }
+
+  .servicesContainer {
+    /* flex-direction: row-reverse; */
+  }
   .serviceType {
-    width: 50%;
-    height: 40%;
+    width: 45%;
   }
 
   #newRequest {
     margin-right: auto;
   }
-  .servicesContainer {
-    width: 100vw;
-  }
+
 
   /* Partners Section */
-  /* #ourPartners {
-  }
-
+  
   #partnersTitle {
     text-align: center;
   }
@@ -192,92 +221,37 @@ nav {
     justify-content: space-evenly;
     margin-right: 0;
     margin-left: 0;
-  }  */
+  } 
 
-  /* Main container */
-/* 
-  .container {
-   
-    margin-left: 2%;
-    margin-right: 2%;
-    grid-template-rows: 0.4fr, 0.2fr, 0.4fr, 0.4fr, 0.4fr;
-    grid-template-areas:
-    'nav'  
-    'steps'
-      'ourServices'
-      'apiData'
-      'ourPartners';
+
+  /* Footer Res. */
+  .footer {
+    font-size: 0.5rem;
   }
 
-  nav{
-    grid-area: 'nav';
+  #linksContainer {
+    gap: 10px !important;
   }
-  #apiData {
-    height: 60vh;
+
+  .footer {
+    gap: 20px !important;
   }
-   */
 
-.app, .container{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+  #copyright,
+  #linksContainer {
+    margin-bottom: 5px;
+  }
 
-.container{
-  width:100vw;
-  margin-left:0;
-  margin-right:0;
-  
-}
+  #copyright {
+    margin-right: 5px;
+  }
 
-#ourServices,#ourPartners,#apiData{
-  /* width:100vw; */
-  margin-left:2%;
-  margin-right:2%;
-}
-
-#apiData{
-  order:2;
-}
-#ourPartners{
-  order:3
-}
-
-
-body{
-  width:100vw;
-  height: 100vh;
-
-}
-
-.footer {
-  font-size: 0.5rem;
-}
-
-#linksContainer{
-  gap:10px !important;
-}
-
-.footer{
-  gap:20px !important;
-}
-
-#copyright,
-#linksContainer {
-margin-bottom: 5px;
-}
-
-#copyright{
-margin-right:5px;
-}
-
-.icons{
-width:10px;
-height: 10px;
-margin-left: 2px !important;
-margin-right: 2px !important;
-}
-
+  .icons {
+    width: 10px;
+    height: 10px;
+    margin-left: 2px !important;
+    margin-right: 2px !important;
+  }
 }
 
 /* end of media query */
@@ -285,20 +259,6 @@ margin-right: 2px !important;
 /* ------------------------------------------------ */
 /* Footer */
 .footer {
-  /* height: 4vh; */
-  /* background-color: #1f7166;
-  color: white; */
-  /* position: relative;
-  left: 0;
-  bottom: 0;
-  width: 100%; */
-
-  /* 
-  clear: both;
-  position: relative;
-  z-index: 10;
-  height: 3em;
-  margin-top: -3em; */
   background-color: #1f7166;
   color: white;
   display: flex;
@@ -326,14 +286,13 @@ margin-right: 2px !important;
   margin-top: 10px;
 }
 
-#linksContainer{
-  gap:5px;
+#linksContainer {
+  gap: 5px;
 }
 
-.footer{
-  gap:60%;
+.footer {
+  gap: 60%;
 }
-
 
 /* ..................................................................... /
 /* Process Info */

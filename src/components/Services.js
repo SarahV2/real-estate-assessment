@@ -8,7 +8,7 @@ export default function Services() {
       <p className='setionTitle'>كيف نستطيع أن نقدم خدمتنا اليوم؟</p>
       <div className='servicesContainer'>
         {/* New */}
-        <div className='serviceType' id='newRequest'>
+        <div className='serviceType active' id='newRequest'>
           <div className='imageContainer'>
             <img
               className='serviceImage'
