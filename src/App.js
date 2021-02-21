@@ -14,7 +14,7 @@ function App() {
         {/* <section className='content' id='processInfo'>
           Steps
         </section> */}
-        {/* <ProcessInfo/> */}
+        <ProcessInfo/>
         <section className='content' id='apiData'>
           API Res.
         </section>

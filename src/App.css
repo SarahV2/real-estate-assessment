@@ -149,11 +149,35 @@ nav {
   height: 70px;
 }
 
+
+
 /* Media query */
 @media only screen and (max-width: 700px) {
  
 
-  
+  /* Process */
+  .line {
+    /* width:10px !important; */
+    /* margin-bottom: 80%; */
+    display: none;
+
+  }
+
+  .splitter{
+    /* width: 10px; */
+    /* width:10% !important; */
+display: none !important;
+  }
+
+  .singleStep{
+    width:10%
+  }
+  .detailedStage{
+    font-size: 10px;
+  }
+
+
+  /* ................... */
 
 
 
@@ -170,6 +194,7 @@ nav {
     margin-right: 0;
   }
 
+  #processInfo,
   #ourServices,
   #ourPartners,
   #apiData {
@@ -252,10 +277,23 @@ nav {
     margin-left: 2px !important;
     margin-right: 2px !important;
   }
+
+
 }
 
 /* end of media query */
 
+
+@media only screen and (max-width: 460px) {
+  #splittedProcess{
+    flex-direction: column !important;
+  }
+}
+
+#splittedProcess{
+  display: flex;
+  flex-direction: row-reverse;
+}
 /* ------------------------------------------------ */
 /* Footer */
 .footer {
@@ -291,19 +329,21 @@ nav {
 }
 
 .footer {
-  gap: 60%;
+  gap: 50%;
 }
 
 /* ..................................................................... /
 /* Process Info */
 
-#processInfo {
+#processContainer {
   /* width: 90vw; */
   /* border-radius: 15px; */
   height: 15vh;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
+  padding-left:2%;
+  padding-right: 2%;
 }
 
 /* Main stage containers */
@@ -311,6 +351,10 @@ nav {
 .detailedStage {
   display: flex;
   flex-direction: row-reverse;
+  /* font-family: 'Tajawal', serif; */
+  font-size: 12px;
+  font-weight: 600;
+
 }
 
 .singleStep {
@@ -332,13 +376,20 @@ nav {
   justify-content: center;
   flex-direction: column;
   /* background-color: yellowgreen; */
+  width:80%;
+  
+}
+
+div:nth-child(6) .line{
+  display: none !important;
 }
 
 .line {
   height: 5px;
   background-color: #ececec;
-  width: 70px;
-  display: inline;
+  /* min-width: 100px; */
+  width: calc(150px - 100);
+  display: inline-block;
   margin-bottom: 80%;
 }
 
