@@ -6,6 +6,7 @@ import Partners from './components/Partners';
 import Footer from './components/layout/Footer';
 import Navbar from './components/layout/Navbar';
 import ProcessInfo from './components/ProcessInfo';
+import APIResponse from './components/APIResponse';
 function App() {
   return ( 
     <div className='app'>
@@ -15,9 +16,9 @@ function App() {
           Steps
         </section> */}
         <ProcessInfo/>
-        <section className='content' id='apiData'>
-          API Res.
-        </section>
+
+        <APIResponse/>
+
 
         {/* Services */}
         <Services />
