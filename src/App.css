@@ -122,7 +122,12 @@ nav {
 #apiData {
   grid-area: apiData;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 }
+
 
 /* Our Partners Section */
 
@@ -151,9 +156,30 @@ nav {
 
 
 
+
+.stageIcon{
+  width:25px;
+  height: 25px;
+  margin-top:25%;
+}
 /* Media query */
 @media only screen and (max-width: 700px) {
  
+  .stageIcon{
+    margin-top: 5%;
+  }
+  .fancyNum {
+    background-color: #524f52;
+    border-radius: 50%;
+    width: 14px;
+    font-size: small;
+  }
+  
+  .stepImg {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
 
   /* Process */
   .line {
@@ -173,7 +199,7 @@ display: none !important;
     width:10%
   }
   .detailedStage{
-    font-size: 10px;
+    font-size: 5px;
   }
 
 
@@ -205,10 +231,53 @@ display: none !important;
 
   #apiData {
     order: 2;
+
+
+
+  }
+  #apiData p{
+    padding-top:20%;
+    padding-bottom: 20%;
   }
   #ourPartners {
     order: 3;
+
   }
+
+  #processContainer{
+    background-color: red;
+    width:30%;
+  }
+
+  
+  .processContainer{
+    /* background-color: violet; */
+    margin:0;
+    padding:0;
+  }
+  #processInfo{
+    margin-left:0;
+    margin-right: 0;
+  }
+
+  .splittedProcess .content{
+    background-color: blue;
+    margin-left:0;
+    margin-right: 0;
+  }
+
+  body{
+    height: 100vh !important;
+    background-image: url(./assets/bg.png);
+    background-repeat:repeat-y;
+    background-size: 100%;
+  }
+
+  .container{
+    margin-bottom: 50vh;
+
+  }
+
 
   /* Services Section */
 
@@ -252,7 +321,11 @@ display: none !important;
   /* Footer Res. */
   .footer {
     font-size: 0.5rem;
+    bottom: 0;
+    position: absolute;
+    margin-top: 30%;
   }
+
 
   #linksContainer {
     gap: 10px !important;
@@ -293,6 +366,7 @@ display: none !important;
 #splittedProcess{
   display: flex;
   flex-direction: row-reverse;
+  gap:0px;
 }
 /* ------------------------------------------------ */
 /* Footer */
@@ -335,7 +409,7 @@ display: none !important;
 /* ..................................................................... /
 /* Process Info */
 
-#processContainer {
+.processContainer {
   /* width: 90vw; */
   /* border-radius: 15px; */
   height: 15vh;
@@ -352,7 +426,7 @@ display: none !important;
   display: flex;
   flex-direction: row-reverse;
   /* font-family: 'Tajawal', serif; */
-  font-size: 12px;
+  font-size: 8px;
   font-weight: 600;
 
 }
@@ -380,8 +454,9 @@ display: none !important;
   
 }
 
-div:nth-child(6) .line{
+#splittedProcess > section:nth-child(2) > div:nth-child(3) > div.splitter> div{
   display: none !important;
+
 }
 
 .line {
@@ -429,10 +504,13 @@ div:nth-child(6) .line{
 
 .stepImg {
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-color: #ececec;
   text-align: center;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 /* Stage description paragraph */

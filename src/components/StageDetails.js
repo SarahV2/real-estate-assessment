@@ -11,7 +11,7 @@ export default function StageDetails(props) {
                 </div>
 
                 <div className='stepImg'>
-                    <img src={props.data.imgSrc} />
+                    <img className='stageIcon' src={props.data.imgSrc} />
                 </div>
                 {/* <div className='connector'></div> */}
 

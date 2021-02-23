@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import Services from './components/Services';
-
 import './App.css';
-import Partners from './components/Partners';
-import Footer from './components/layout/Footer';
 import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 import ProcessInfo from './components/ProcessInfo';
+import Services from './components/Services';
 import APIResponse from './components/APIResponse';
+import Partners from './components/Partners';
+
 function App() {
-  return ( 
+  return (
     <div className='app'>
-      <Navbar/>
+      <Navbar />
       <div className='container'>
-        {/* <section className='content' id='processInfo'>
-          Steps
-        </section> */}
-        <ProcessInfo/>
+        {/* Process Stages */}
+        <ProcessInfo />
 
-        <APIResponse/>
-
+        {/* Api */}
+        <APIResponse />
 
         {/* Services */}
         <Services />
@@ -30,5 +27,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
