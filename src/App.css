@@ -321,9 +321,10 @@ display: none !important;
   /* Footer Res. */
   .footer {
     font-size: 0.5rem;
-    bottom: 0;
-    position: absolute;
+    /* bottom: 0; */
+    /* position: relative; */
     margin-top: 30%;
+
   }
 
 
@@ -378,12 +379,20 @@ display: none !important;
   justify-content: center;
   align-items: center;
   text-align: center;
-  position: fixed;
+  /* position: fixed; */
+  /* margin-top: 15rem; */
   bottom: 0;
+  /* left:0; */
   width: 100vw;
   min-height: 3vh;
   font-family: 'Tajawal', serif;
   font-size: medium;
+}
+.footerMain{
+  /* display: block; */
+    position: fixed;
+    margin-top: 5rem;
+
 }
 
 .icons {

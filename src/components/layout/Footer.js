@@ -5,6 +5,7 @@ import FacebookIcon from '../../assets/facebook.png';
 
 export default function Footer() {
     return (
+        <footer className='footerMain'>
         <div className='footer'>
             <div id='copyright'>جميع الحقوق محفوظة 2021</div>
 
@@ -31,5 +32,6 @@ export default function Footer() {
 
             </div>
         </div>
+        </footer>
     );
 }

@@ -1,6 +1,6 @@
 nav {
     background-color: #fff;
-    height: 8vh;
+    height: 60px;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -105,10 +105,13 @@ nav {
   .dropdownBtn {
     background-color: #fff; /*will be removed later */
     color: #808080;
-    padding: 20px;
+    padding-top: 20px;
+    padding-left:15px;
     font-size: 16px;
     border: none;
     cursor: pointer;
+    outline: none;
+
   }
   
   #arrow {
