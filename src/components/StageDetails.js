@@ -1,24 +1,28 @@
-import React from 'react'
+import React from 'react';
 
 export default function StageDetails(props) {
-    return (
-        <div className='singleStep'>
-            {/* Step Nmber and icon */}
-            <div className='visualData'>
-                {/* <div className='connector'></div> */}
-                <div className='stepNumber'>
-                    <p className='fancyNum'>{props.data.id}</p>
-                </div>
-
-                <div className='stepImg'>
-                    <img className='stageIcon' src={props.data.imgSrc} />
-                </div>
-                {/* <div className='connector'></div> */}
-
-            </div>
-            {/* Step Info */}
-            <div className='stepInfo'>
-                <p>{props.data.description}</p>
-            </div>
-        </div>)
+  const stage = props.data;
+  return (
+    <li className='step'>
+      <div className='step-content'>
+        {/* Main Stage Container */}
+        <span className='step-circle'>
+          {/* Icon */}
+          <div className='stepImg'>
+            <img className='stageIcon' src={stage.imgSrc} />
+          </div>
+          {/* Process stage/step number */}
+          <div className='stepNumber'>
+            <p className='fancyNum'>{stage.id}</p>
+          </div>
+        </span>
+        <span>
+          {/* Stage/step description */}
+          <div className='stepInfo'>
+            <p>{stage.description}</p>
+          </div>
+        </span>
+      </div>
+    </li>
+  );
 }

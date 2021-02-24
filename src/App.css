@@ -10,27 +10,19 @@ html,
 body {
   position: relative;
   margin: 0;
+  overflow-x: hidden;
   padding: 0;
-  /* overflow:auto;  */
   height: 100%;
 }
+
 /* Body */
 
 body {
-  margin: 0;
   text-align: center;
-  /* align-items: center; */
   font-family: 'Tajawal', serif;
   background-image: url(./assets/bg.png);
   background-repeat: no-repeat;
   background-size: 100%;
-}
-
-/* Navbar */
-
-nav {
-  background-color: red;
-  height: 10vh;
 }
 
 /* ------------------------------------------------ */
@@ -42,10 +34,10 @@ nav {
   margin-top: 1rem;
   display: grid;
   height: 80vh;
-  margin-left: 10%;
-  margin-right: 10%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.2fr 0.2fr 0.4fr;
+  /* margin-left: 5%; */
+  /* margin-right: 5%; */
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 0.1fr 0.2fr 0.4fr;
   grid-gap: 1rem;
   grid-template-areas:
     'steps steps'
@@ -54,8 +46,10 @@ nav {
 }
 .setionTitle {
   text-align: right;
-  margin-right: 3%;
+  margin-right: 2%;
+  margin-top: 2%;
   font-weight: 900;
+  font-size: 16px;
 }
 
 .content {
@@ -63,10 +57,72 @@ nav {
   background-color: #fff;
 }
 
-/* Request Journey Section */
+/* ---------------------------------------------------------------*/
+
+/* Request/Process Section */
 
 #processInfo {
   grid-area: steps;
+}
+
+#processInfo > p {
+  margin-bottom: 0;
+}
+
+/* Override stepper package classes */
+.step-circle {
+  width: 4em !important;
+  height: 3rem !important;
+  border: none !important;
+}
+
+.step-circle::before {
+  height: 1px !important;
+  width: 6rem;
+}
+
+.step-content {
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.stepNumber {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 15%;
+}
+
+.fancyNum {
+  background-color: #524f52;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  font-size: 8px;
+}
+
+.stepImg {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #ececec;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Stage description paragraph */
+.stepInfo {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.stageIcon {
+  width: 25px;
+  height: 25px;
+  margin-top: 25%;
 }
 
 /* Services Section */
@@ -112,10 +168,12 @@ nav {
   margin-bottom: 0;
 }
 
-.active{
-  background-color:#1f7166;
+.active {
+  background-color: #1f7166;
   color: #fff;
 }
+
+/* ---------------------------------------------------------------*/
 
 /* API Data Section */
 
@@ -128,6 +186,7 @@ nav {
   flex-direction: column;
 }
 
+/* ---------------------------------------------------------------*/
 
 /* Our Partners Section */
 
@@ -155,17 +214,20 @@ nav {
 }
 
 
+/* ---------------------------------------------------------------*/
 
-
-.stageIcon{
-  width:25px;
-  height: 25px;
-  margin-top:25%;
-}
 /* Media query */
-@media only screen and (max-width: 700px) {
- 
-  .stageIcon{
+
+@media only screen and (max-width: 772px) {
+  .step-circle::before {
+    width: 3rem !important;
+  }
+  .step-content {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  /* .stageIcon{
     margin-top: 5%;
   }
   .fancyNum {
@@ -178,34 +240,24 @@ nav {
   .stepImg {
     width: 30px !important;
     height: 30px !important;
-  }
-
+  } */
 
   /* Process */
-  .line {
-    /* width:10px !important; */
-    /* margin-bottom: 80%; */
-    display: none;
 
+  .stepInfo {
+    font-size: 9px;
   }
-
-  .splitter{
-    /* width: 10px; */
-    /* width:10% !important; */
-display: none !important;
-  }
-
-  .singleStep{
-    width:10%
-  }
-  .detailedStage{
-    font-size: 5px;
-  }
-
 
   /* ................... */
 
-
+  body {
+    height: 100vh !important;
+    background-image: url(./assets/bg.png);
+    background-repeat: repeat-y;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 
   .app,
   .container {
@@ -216,68 +268,39 @@ display: none !important;
 
   .container {
     width: 100vw;
-    margin-left: 0;
-    margin-right: 0;
+    height: 100vh;
+    margin-bottom: 5vh;
   }
+.app{
+  min-height: 100vh;
 
+}
   #processInfo,
   #ourServices,
   #ourPartners,
   #apiData {
-    /* width:100vw; */
     margin-left: 2%;
     margin-right: 2%;
   }
 
+  .setionTitle {
+    font-size: 12px;
+  }
+  /* API Section */
   #apiData {
     order: 2;
-
-
-
   }
-  #apiData p{
-    padding-top:20%;
+  #apiData p {
+    padding-top: 20%;
     padding-bottom: 20%;
   }
+
+  /* Our Partners Section */
   #ourPartners {
     order: 3;
-
   }
 
-  #processContainer{
-    background-color: red;
-    width:30%;
-  }
-
-  
-  .processContainer{
-    /* background-color: violet; */
-    margin:0;
-    padding:0;
-  }
-  #processInfo{
-    margin-left:0;
-    margin-right: 0;
-  }
-
-  .splittedProcess .content{
-    background-color: blue;
-    margin-left:0;
-    margin-right: 0;
-  }
-
-  body{
-    height: 100vh !important;
-    background-image: url(./assets/bg.png);
-    background-repeat:repeat-y;
-    background-size: 100%;
-  }
-
-  .container{
-    margin-bottom: 50vh;
-
-  }
-
+  /* Process Section */
 
   /* Services Section */
 
@@ -299,9 +322,8 @@ display: none !important;
     margin-right: auto;
   }
 
-
   /* Partners Section */
-  
+
   #partnersTitle {
     text-align: center;
   }
@@ -315,214 +337,18 @@ display: none !important;
     justify-content: space-evenly;
     margin-right: 0;
     margin-left: 0;
-  } 
-
-
-  /* Footer Res. */
-  .footer {
-    font-size: 0.5rem;
-    /* bottom: 0; */
-    /* position: relative; */
-    margin-top: 30%;
-
   }
-
-
-  #linksContainer {
-    gap: 10px !important;
-  }
-
-  .footer {
-    gap: 20px !important;
-  }
-
-  #copyright,
-  #linksContainer {
-    margin-bottom: 5px;
-  }
-
-  #copyright {
-    margin-right: 5px;
-  }
-
-  .icons {
-    width: 10px;
-    height: 10px;
-    margin-left: 2px !important;
-    margin-right: 2px !important;
-  }
-
-
 }
 
 /* end of media query */
 
-
-@media only screen and (max-width: 460px) {
-  #splittedProcess{
-    flex-direction: column !important;
+@media only screen and (min-width: 773px) and (max-width: 994px) {
+  .step-circle::before {
+    width: 2rem;
   }
-}
 
-#splittedProcess{
-  display: flex;
-  flex-direction: row-reverse;
-  gap:0px;
-}
-/* ------------------------------------------------ */
-/* Footer */
-.footer {
-  background-color: #1f7166;
-  color: white;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  /* position: fixed; */
-  /* margin-top: 15rem; */
-  bottom: 0;
-  /* left:0; */
-  width: 100vw;
-  min-height: 3vh;
-  font-family: 'Tajawal', serif;
-  font-size: medium;
-}
-.footerMain{
-  /* display: block; */
-    position: fixed;
-    margin-top: 5rem;
-
-}
-
-.icons {
-  width: 25px;
-  height: 25px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-#copyright,
-.footer #linksContainer {
-  margin-top: 10px;
-}
-
-#linksContainer {
-  gap: 5px;
-}
-
-.footer {
-  gap: 50%;
-}
-
-/* ..................................................................... /
-/* Process Info */
-
-.processContainer {
-  /* width: 90vw; */
-  /* border-radius: 15px; */
-  height: 15vh;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  padding-left:2%;
-  padding-right: 2%;
-}
-
-/* Main stage containers */
-
-.detailedStage {
-  display: flex;
-  flex-direction: row-reverse;
-  /* font-family: 'Tajawal', serif; */
-  font-size: 8px;
-  font-weight: 600;
-
-}
-
-.singleStep {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  /* background-color: violet; */
-  margin-left: 10px;
-  width: 100%;
-  margin-left: 0px;
-}
-
-/* Connectors between stages */
-
-.splitter {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  flex-direction: column;
-  /* background-color: yellowgreen; */
-  width:80%;
-  
-}
-
-#splittedProcess > section:nth-child(2) > div:nth-child(3) > div.splitter> div{
-  display: none !important;
-
-}
-
-.line {
-  height: 5px;
-  background-color: #ececec;
-  /* min-width: 100px; */
-  width: calc(150px - 100);
-  display: inline-block;
-  margin-bottom: 80%;
-}
-
-.connector {
-  height: 5px;
-  background-color: #ececec;
-  width: 30px;
-  margin-left: 0;
-  margin-right: 0;
-  padding-right: 0;
-  padding-left: 0;
-  margin-top: 30px;
-}
-
-/* Step Number + image container */
-.visualData {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-}
-.stepNumber {
-  color: white;
-  text-align: center;
-  font-weight: bold;
-}
-
-.fancyNum {
-  background-color: #524f52;
-  border-radius: 50%;
-  width: 18px;
-  font-size: small;
-}
-
-.stepImg {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  background-color: #ececec;
-  text-align: center;
-  display:flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-/* Stage description paragraph */
-.stepInfo {
-  text-align: center;
+  .step-content {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
 }

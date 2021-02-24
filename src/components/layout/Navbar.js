@@ -35,7 +35,7 @@ export default function Navbar() {
           </div>
   
           <div id='timer'>
-            <p>text</p>
+            <p>8:46</p>
           </div>
         </div>
       </nav>
