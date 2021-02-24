@@ -6,9 +6,13 @@
   margin-top: 0;
 }
 
+html{
+  scroll-behavior: smooth;
+
+}
 html,
 body {
-  position: relative;
+  /* position: relative; */
   margin: 0;
   overflow-x: hidden;
   padding: 0;
@@ -255,8 +259,8 @@ body {
     background-image: url(./assets/bg.png);
     background-repeat: repeat-y;
     background-size: 100%;
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
   }
 
   .app,

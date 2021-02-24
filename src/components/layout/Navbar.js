@@ -4,13 +4,9 @@ import Dropdown from './Dropdown';
 
 export default function Navbar() {
     return (
-        <nav>
+        <nav id='navbar'>
         {/* Right section */}
         <div id='navPicContainer' className='navElement'>
-          {/* <div id='hamburger-nav' className='dropdown'>
-            <div id='nav-icon' className='fa fa-bars '></div>
-            <Dropdown />
-          </div> */}
           <div id='picPlaceholder'></div>
           <div id='borderLeft'></div>
         </div>
