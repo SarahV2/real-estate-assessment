@@ -1,4 +1,4 @@
-nav {
+#navbar {
   background-color: #fff;
   height: 60px;
   display: flex;
@@ -88,23 +88,19 @@ nav {
   width: 50px;
   height: 90%;
   border-radius: 50%;
-  background-color:#F0BC44;
+  background-color: #f0bc44;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  background-image:
-  linear-gradient(260deg, transparent 50%, #ececec 50%),
-  linear-gradient(45deg, #ececec 50%, transparent 50%);
+  background-image: linear-gradient(260deg, transparent 50%, #ececec 50%),
+    linear-gradient(45deg, #ececec 50%, transparent 50%);
 }
 
-
-#timer p{
+#timer p {
   font-weight: 600;
   margin-top: 40% !important;
-  color: #1f7166
-
-
+  color: #1f7166;
 }
 
 /* Dropdown Menu */
@@ -166,14 +162,25 @@ nav {
     padding: 0;
   }
 
+  .bm-burger-button {
+    /* display: inline; */
+    /* margin-left: 100px; */
+
+  }
+
+
   /* Right section */
   #navPicContainer {
     padding-top: 10px;
   }
 
   #picPlaceholder {
-    width: 40px; /* Could slso be 50px*/
+    width: 45px; 
     height: 40px;
+    margin-left: 5px;
+    margin-right: 27%;
+  
+
   }
 
   /* Middle section */
@@ -235,6 +242,9 @@ nav {
     position: fixed;
     margin-top: 5rem;
   }
+  .bm-burger-button {
+    display: none;
+  }
 }
 /* ------------------------------------------------ */
 /* Footer */
@@ -275,4 +285,76 @@ nav {
 
 .footer {
   gap: 50%;
+}
+
+/* ---------------------------------------------------- */
+/* Side Nav Menu */
+
+.bm-item-list {
+  text-align: center;
+  /* Prevent sidebar from showing a scrollbar on page */
+  overflow-x: hidden;
+  /* background-color: red; */
+  width:230px;
+}
+
+/* Sidebar */
+
+.bm-menu {
+  background:url('../../assets/bg.png');
+
+  /* background: #fff; */
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Side Nav Items/links */
+
+.menu-item {
+  text-align: right;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #000;
+  outline: none;
+  transition: color 0.2s;
+}
+
+/* Buttons */
+
+/*  Burger Menu Button */
+.bm-burger-button {
+  position: relative;
+  width: 15px;
+  height: 10px;
+  right: 15px;
+  top: 30px;
+  float: right;
+  /* display: block; */
+}
+.bm-burger-bars {
+  background: #000;
+}
+
+/* Cross (exit) button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+  left: 5px;
+}
+
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* Icons */
+
+.mini-icon {
+  width: 20px;
+  height: 20px;
+  margin-top: 7px;
 }
