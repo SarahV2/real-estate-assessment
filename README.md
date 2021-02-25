@@ -29,4 +29,4 @@ In order for the backend code to run succesfully, you'll need to provide the ```
 
 ## Resources
 * <a name="firstResource" href="https://www.npmjs.com/package/react-burger-menu"> React Burger Menu</a>
-* <a href="https://www.npmjs.com/package/bootstrap-steps" >Steppers</a>
+* <a href="https://www.npmjs.com/package/bootstrap-steps" >Stepper</a>
