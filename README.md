@@ -12,7 +12,7 @@ Frontend React application with a simple backend project
 In order to run the app locally, you'll first need to clone this repository using the ```git clone``` command and then follow the steps:
 1. Navigate to the project's folder and run ```npm i``` to install backend's dependencies.
 2. Next, install the client app's dependencies: ```cd client``` followed by ```npm i```.
-3. Run the command ``` npm run dev ``` to start both front and backend servers concurrently.
+3. ``cd`` back to the project's root folder and run the command ``` npm run dev ``` to start both front and backend servers concurrently.
 
 ##### ** Getting a response from the backend server:
 In order for the backend code to run succesfully, you'll need to provide the ```cliend_id``` and ```client_secret``` credientials:
