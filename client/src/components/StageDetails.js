@@ -13,7 +13,7 @@ export default function StageDetails(props) {
           </div>
           {/* Process stage/step number */}
           <div className='stepNumber'>
-            <p className='fancyNum'>{stage.id}</p>
+            <p className='stageNum'>{stage.id}</p>
           </div>
         </span>
         <span>

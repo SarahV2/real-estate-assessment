@@ -97,12 +97,12 @@ body {
   margin-top: 15%;
 }
 
-.fancyNum {
+.stageNum {
   background-color: #524f52;
   border-radius: 50%;
   width: 12px;
   height: 12px;
-  font-size: 8px;
+  font-size: 9px;
 }
 
 .stepImg {
@@ -234,7 +234,7 @@ body {
   /* .stageIcon{
     margin-top: 5%;
   }
-  .fancyNum {
+  .stageNum {
     background-color: #524f52;
     border-radius: 50%;
     width: 14px;
@@ -315,9 +315,6 @@ body {
     display: none;
   }
 
-  .servicesContainer {
-    /* flex-direction: row-reverse; */
-  }
   .serviceType {
     width: 45%;
   }
